@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-9">
+        <div class="card">
+            <img [src]="card.imagePath" alt="Avatar" class="img img-responsive card-image">
+            <div class="container">
+              <h4><b>{{card.name}}</b></h4> 
+              <p>{{card.group}}</p> 
+              <button type="button" class="btn btn-primary" (click)="onSelect(card)">View</button>
+            </div>
+          </div>
+    </div>
+  </div>
+ 

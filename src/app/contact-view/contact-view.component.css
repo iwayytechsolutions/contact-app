@@ -1,0 +1,16 @@
+.mt20 {
+    margin-top : 20px;
+}
+
+.ml20 {
+    margin: 0 auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.image-size {
+    width : 200px;
+    height : 200px;
+}

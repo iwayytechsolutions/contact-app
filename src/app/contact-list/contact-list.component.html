@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let card of cardList">
+    <app-card 
+      [card]="card" 
+      (onCardSelected)="onCardSelected($event)" >
+    </app-card>
+  </div>
+</div>
