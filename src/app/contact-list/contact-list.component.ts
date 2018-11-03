@@ -29,7 +29,7 @@ export class ContactListComponent implements OnInit {
 
   onCardSelected(card) {
     console.log('onCardSelected', card);
-    this.router.navigate(['contacts', card.id]);
+    this.router.navigate(['contacts-view/personal', card.id]);
   }
 
  

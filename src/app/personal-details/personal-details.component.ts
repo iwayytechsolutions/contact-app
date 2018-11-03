@@ -1,3 +1,5 @@
+import { Contact } from './../model/contact.model';
+import { ContactService } from './../services/contact.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalDetailsComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private contactService: ContactService) { }
+  contact: Contact;
 
   ngOnInit() {
-    this.route.params.subscribe(params => console.log(params.id));
+    //console.log(this.route.snapshot.params["id"]);
+    this.route.params.subscribe(params => {
+      this.contact = this.contactService.getContactById(params.id);
+    });
   }
-
 }
